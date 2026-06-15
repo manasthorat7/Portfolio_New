@@ -65,7 +65,7 @@ export function Hero() {
           <div className="relative w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96 group">
             <div className="absolute inset-0 bg-accent/30 rounded-3xl blur-2xl animate-pulse group-hover:bg-accent/40 transition-all duration-500" />
             <img 
-              src="/profile.png" 
+              src={`${import.meta.env.BASE_URL}profile.png`} 
               alt="Manas Thorat" 
               className="w-full h-full object-cover rounded-3xl border-2 border-white/10 relative z-10 shadow-2xl transition-transform duration-500 hover:scale-105"
               onError={(e) => {
@@ -82,7 +82,7 @@ export function Hero() {
             >
               <div>
                 Please save your photo as<br/> 
-                <code className="bg-black/50 px-2 py-1 rounded mt-2 block font-mono text-sm border border-white/5 text-white">public/profile.jpg</code>
+                <code className="bg-black/50 px-2 py-1 rounded mt-2 block font-mono text-sm border border-white/5 text-white">public/profile.png</code>
               </div>
             </div>
           </div>

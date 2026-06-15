@@ -96,7 +96,7 @@ export function Projects() {
                 <div className="relative aspect-video rounded-2xl overflow-hidden glass-card">
                   <div className="absolute inset-0 bg-accent/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-10 mix-blend-overlay pointer-events-none" />
                   <img 
-                    src={project.image} 
+                    src={project.image.startsWith('http') ? project.image : `${import.meta.env.BASE_URL}${project.image.startsWith('/') ? project.image.slice(1) : project.image}`} 
                     alt={project.title} 
                     className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                     onError={(e) => {
